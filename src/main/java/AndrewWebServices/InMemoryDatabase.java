@@ -9,11 +9,16 @@ package AndrewWebServices;
  */
 public class InMemoryDatabase extends Database {
     // Implement your fake database here
+    private int password = 17214;
     public int getPassword(String accountName) {
         if (accountName.equals("Scotty")) {
-            return 17214;
+            return password;
         } else {
             return 0;
         }
+    }
+
+    public void setPassword(int password) {
+        this.password = password;
     }
 }

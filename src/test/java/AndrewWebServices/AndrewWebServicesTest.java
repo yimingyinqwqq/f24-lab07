@@ -16,7 +16,7 @@ public class AndrewWebServicesTest {
     public void setUp() {
         // You need to use some mock objects here
         database = new InMemoryDatabase(); // We probably don't want to access our real database...
-        recommender = new RecSys();
+        recommender = new StubRecSys();
         promoService = new PromoService();
 
         andrewWebService = new AndrewWebServices(database, recommender, promoService);
@@ -38,6 +38,7 @@ public class AndrewWebServicesTest {
     public void testSendEmail() {
         // How should we test sendEmail() when it doesn't have a return value?
         // Hint: is there something from Mockito that seems useful here?
+//        promoService.mailTo();
     }
 
     @Test
